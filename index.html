@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rentinn - Rent What You Need</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Toggle and Dark Mode Buttons -->
+    <header class="header">
+        <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+        <div class="header-content">
+            <h1>rentinn</h1>
+            <p class="tagline">Rent What You Need, Lend What You Don’t</p>
+        </div>
+        <div class="dark-mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" onclick="toggleMode()">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Sidebar with Navigation Links -->
+    <div class="sidebar" id="sidebar">
+        <h2>rentinn</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfPmQ8AMcb6iplUr_1jWl8fMBhFQqqJhAsfaADm3CQ_QxMvOw/viewform?usp=sf_link">Feedback</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+        <button class="back-btn" onclick="toggleSidebar()">← Back</button>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container" id="mainContainer">
+        <!-- Search, Category, and Location Bars -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for items...">
+            <button class="search-btn" onclick="performSearch()">Search</button>
+            <button onclick="window.location.href='cc.html'" class="lend-btn">Lend Now</button>
+        </div>
+
+        <div class="category-bar">
+            <select id="categorySelect">
+                <option value="">Select a Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="vehicles">Vehicles</option>
+                <option value="tools">Tools</option>
+                <option value="home-appliances">Home Appliances</option>
+            </select>
+        </div>
+
+        <div class="location-bar">
+            <select id="locationInput">
+                <option value="">Select a Location</option>
+                <option value="karaikudi">Karaikudi</option>
+                <option value="madurai">Madurai</option>
+                <option value="trichy">Trichy</option>
+                <option value="pudukkottai">Pudukkottai</option>
+                <option value="thanjavur">Thanjavur</option>
+            </select>
+        </div>
+
+        <!-- Item List Section -->
+        <div class="item-list" id="itemList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
